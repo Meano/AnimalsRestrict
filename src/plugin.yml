@@ -1,0 +1,22 @@
+name: AnimalsRestrict
+main: Meano.AnimalsRestrict.AnimalsRestrict
+version: 0.1
+author: Meano
+commands:
+  AnimalsRestrict:
+    description: 控制过量动物。
+    usage: /AnimalsRestrict
+    aliases: [ar]
+    permission: AnimalsRestrict.Command
+    permission-message: 你没有权限！
+
+permissions:
+  AnimalsRestrict.*:
+    default: op
+    children:
+      AnimalsRestrict.Command: true
+      AnimalsRestrict.SlimeBlock: true
+  AnimalsRestrict.Command:
+    default: false
+  AnimalsRestrict.SlimeBlock:
+    default: false
